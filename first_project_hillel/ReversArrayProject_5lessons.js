@@ -3,6 +3,7 @@ let EmtyString = ' ';
 let PolidromName = 'Aba';
 let NotPolidromName = '1234';
 let array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16];
+const revers_array = array.reverse()
 
 
 function number_of_characters(name) {
@@ -28,16 +29,15 @@ function palindrome(PolidromName) {
 
 
 function paired_numbers_from_array(array) {
-    let emtyArray = [' '];
+    let emtyArray = [];
     for (let i = 0; i < array.length; i++) {
 
 
         if ((array[i] % 2) === 0) {
 
-            for (let i = array.length - 2; i >= 0; i--)
-                emtyArray += array[i];
+            emtyArray += array[i];
 
-            console.log(array[i]);
+            console.log(`paired number is: ${array[i]}`);
         }
     }
 }
@@ -49,4 +49,4 @@ console.log(revers_worb(name))
 console.log(`================================ \n Polidrome: ${PolidromName}, NotPolidrom: ${NotPolidromName} \n================================`)
 console.log(palindrome(PolidromName))
 console.log(palindrome(NotPolidromName))
-console.log(paired_numbers_from_array(array))
+console.log(paired_numbers_from_array(revers_array))
